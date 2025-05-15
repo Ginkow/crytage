@@ -1,4 +1,4 @@
-Voici GhostByte, un projet de chiffrement, transmission et capture fais en python. Afin de le faire dans un environnement controlé, la cible de ce chiffrement est un dossier précis qui se situe dans le OneDrive/Document/cible.
+Voici GhostByte (vous avez un petit scenario dans le fichier Scenario.txt), un projet de chiffrement, transmission et capture fais en python. Afin de le faire dans un environnement controlé, la cible de ce chiffrement est un dossier précis qui se situe dans le OneDrive/Document/cible.
 
 Si vous voulez poussé le projet plus loin (à ne pas le faire sur son propre pc ou un pc tiers, risque illégal), au lieu de mettre le nom d'un dossier en particulier changer dans les fichiers "encryptage.py" et "decrypte.py" ceci:
 
