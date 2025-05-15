@@ -15,8 +15,9 @@ GREEN = (0, 255, 0) # Pour les power pellets (non implémenté en détail ici)
 # --- Paramètres de l'écran ---
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 680 # Un peu plus haut pour le score
-BLOCK_SIZE = 30 # Taille de chaque case du labyrinthe
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+BLOCK_SIZE = 30  # Taille fixe
+screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+SCREEN_WIDTH, SCREEN_HEIGHT = screen.get_size()
 pygame.display.set_caption("Pac-Man Simplifié")
 
 # --- Horloge pour contrôler le FPS ---
