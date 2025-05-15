@@ -1,7 +1,7 @@
 import os
 from cryptography.fernet import Fernet
 
-folder = "C:\\Users\\jorda\\OneDrive\\Documents\\cible"
+folder = os.path.join(os.environ["USERPROFILE"], "OneDrive", "Documents", "cible")
 
 
 def load_key():
