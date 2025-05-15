@@ -59,7 +59,7 @@ python main.py
 4. Le mettre en .exe
  - Si vous voulez l'executer en .exe, effectuer cette commande:
     ```bash
-    python --onefile --noconsole main.py
+    pyinstaller --onefile --noconsole main.py
     ```
     - ensuite un dossier build et dist apparaitront, copier coller le main.exe et mettais le dans la racine de ce projet comme ceci:
     ```
