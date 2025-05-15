@@ -62,7 +62,7 @@ python main.py
     python --onefile --noconsole main.py
     ```
     - ensuite un dossier build et dist apparaitront, copier coller le main.exe et mettais le dans la racine de ce projet comme ceci:
-
+    ```
     GhostByte/
         │
         ├── main.py
@@ -79,5 +79,6 @@ python main.py
         ├── dist
         │   └── main.exe <-- élement à copier en faisant Ctrl+C
         └── main.exe <-- élement à coller en faisant Ctrl+V
+    ```
 
 Cette ligne vous permettra de creer un executable de façon que lorsque la personne ouvrira celui ci, seul le pacman sera visible mais pas le reste des programmes.
